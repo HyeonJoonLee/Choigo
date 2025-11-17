@@ -18,10 +18,7 @@ export default {
           DEFAULT: '#fbbf24',
         },
       },
-      fontFamily: {
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
-      },
     },
   },
   plugins: [],
-}
+};
