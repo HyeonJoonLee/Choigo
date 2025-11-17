@@ -9,8 +9,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, './'),
     },
   },
+  css: {
+    postcss: './postcss.config.js',
+  },
   build: {
     outDir: 'build',
     sourcemap: false,
+    cssCodeSplit: false,
   },
 });

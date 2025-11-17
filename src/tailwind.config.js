@@ -4,7 +4,8 @@ export default {
     "./index.html",
     "./App.tsx",
     "./main.tsx",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
