@@ -9,5 +9,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './'),
     },
   },
-  base: '/',
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+  },
 });
