@@ -69,7 +69,7 @@
 
 @layer theme {
   :root, :host {
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-red-50: oklch(.971 .013 17.38);
     --color-red-300: oklch(.808 .114 19.571);
@@ -128,8 +128,6 @@
     --default-mono-font-family: var(--font-mono);
     --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
     --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
-    --color-primary: #f97316;
-    --color-secondary: #fbbf24;
   }
 }
 
@@ -1032,11 +1030,11 @@
   }
 
   .bg-primary {
-    background-color: var(--color-primary);
+    background-color: oklch(.205 0 0);
   }
 
   .bg-secondary {
-    background-color: var(--color-secondary);
+    background-color: oklch(.97 0 0);
   }
 
   .bg-white {
@@ -1316,7 +1314,7 @@
   }
 
   .text-primary {
-    color: var(--color-primary);
+    color: oklch(.205 0 0);
   }
 
   .text-primary-foreground {
@@ -1432,7 +1430,7 @@
   }
 
   .selection\:bg-primary ::selection, .selection\:bg-primary::selection {
-    background-color: var(--color-primary);
+    background-color: oklch(.205 0 0);
   }
 
   .selection\:text-primary-foreground ::selection, .selection\:text-primary-foreground::selection {
@@ -1521,13 +1519,7 @@
 
   @media (hover: hover) {
     .hover\:bg-primary\/90:hover {
-      background-color: #f97316e6;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:bg-primary\/90:hover {
-        background-color: color-mix(in oklab, var(--color-primary) 90%, transparent);
-      }
+      background-color: color-mix(in oklab, oklch(.205 0 0) 90%, transparent);
     }
   }
 
@@ -1539,13 +1531,7 @@
 
   @media (hover: hover) {
     .hover\:bg-secondary\/80:hover {
-      background-color: #fbbf24cc;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:bg-secondary\/80:hover {
-        background-color: color-mix(in oklab, var(--color-secondary) 80%, transparent);
-      }
+      background-color: color-mix(in oklab, oklch(.97 0 0) 80%, transparent);
     }
   }
 
@@ -1659,7 +1645,7 @@
   }
 
   .data-\[state\=checked\]\:bg-primary[data-state="checked"] {
-    background-color: var(--color-primary);
+    background-color: oklch(.205 0 0);
   }
 
   .data-\[state\=unchecked\]\:translate-x-0[data-state="unchecked"] {
@@ -1810,25 +1796,13 @@
 
   @media (hover: hover) {
     a.\[a\&\]\:hover\:bg-primary\/90:hover {
-      background-color: #f97316e6;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      a.\[a\&\]\:hover\:bg-primary\/90:hover {
-        background-color: color-mix(in oklab, var(--color-primary) 90%, transparent);
-      }
+      background-color: color-mix(in oklab, oklch(.205 0 0) 90%, transparent);
     }
   }
 
   @media (hover: hover) {
     a.\[a\&\]\:hover\:bg-secondary\/90:hover {
-      background-color: #fbbf24e6;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      a.\[a\&\]\:hover\:bg-secondary\/90:hover {
-        background-color: color-mix(in oklab, var(--color-secondary) 90%, transparent);
-      }
+      background-color: color-mix(in oklab, oklch(.97 0 0) 90%, transparent);
     }
   }
 
@@ -1844,11 +1818,11 @@
 }
 
 body {
-  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
 }
 
 h1 {
